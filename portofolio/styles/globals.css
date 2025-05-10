@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fafcff;
+  color: #20232b;
+}
+h1,
+h2,
+h3 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: "block";
+  width: "62px";
+  height: "5px";
+  margin: "14px auto 0";
+  borderradius: "3px";
+  background: "linear-gradient(90deg, #46a6fd 0%, #38e8ff 100%)";
+  animation: "movegrad 2.3s linear infinite";
+}
+a {
+  color: #3a7bfd;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+section {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.keen-slider {
+  overflow: visible;
+  padding-bottom: 20px;
+}
+.keen-slider__slide {
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: grab;
+}
+.keen-slider__slide:hover {
+  box-shadow: 0 12px 36px #2fdfff27;
+  transform: scale(1.04);
+}

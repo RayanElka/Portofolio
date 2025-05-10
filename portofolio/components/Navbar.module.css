@@ -1,0 +1,31 @@
+.nav {
+  position: sticky;
+  top: 0;
+  background: #1a2236;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6vw;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(10, 20, 50, 0.08);
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+.links {
+  list-style: none;
+  display: flex;
+  gap: 1.7rem;
+}
+.links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.links li a:hover {
+  color: #46a6fd;
+}
