@@ -1,12 +1,34 @@
 const experiences = [
   {
-    functie: "Data & Project Consultant",
-    bedrijf: "Jouw Bedrijf",
-    periode: "2024 - heden",
-    beschrijving: "Consulting, data, innovatie & projectbegeleiding.",
+    functie: "AI Training & AI Coding Training",
+    bedrijf: "Outlier AI",
+    periode: "Nov 2024 - heden",
+    beschrijving:
+      "Werken aan het trainen en ontwikkelen van AI-systemen en het ondersteunen van AI-coding projecten. Remote functie gericht op innovatie en technologie.",
   },
-  // ...meer ervaring...
+  {
+    functie: "Schoonmaker/Handyman",
+    bedrijf: "ISS Facility Services/Cleaningservices",
+    periode: "Aug 2023 — Sept 2024",
+    beschrijving:
+      "Uitvoeren van schoonmaak- en kluswerkzaamheden op verschillende locaties in Puurs.",
+  },
+  {
+    functie: "Orderpicker",
+    bedrijf: "PostNL",
+    periode: "2021 — 2023",
+    beschrijving:
+      "Verantwoordelijk voor het verzamelen en verzendklaar maken van bestellingen in het distributiecentrum van Bornem.",
+  },
+  {
+    functie: "Student",
+    bedrijf: "Carrefour",
+    periode: "2018 — 2021",
+    beschrijving:
+      "Diverse ondersteunende taken als student-medewerker in Bornem.",
+  },
 ];
+
 export default function Experience() {
   return (
     <section

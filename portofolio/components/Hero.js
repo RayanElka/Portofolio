@@ -25,7 +25,8 @@ export default function Hero() {
             margin: "0 auto 1.7rem",
           }}
         >
-          Consultant & analyst met passie voor data en innovatie. <br />
+          Gemotiveerde student met een passie voor data en innovatie, op zoek
+          naar een uitdagende stageplek. <br />
           <span
             style={{
               background: "rgba(255,255,255,0.15)",

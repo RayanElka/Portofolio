@@ -9,7 +9,7 @@ export default function Contact() {
         <p>
           Interesse in samenwerken?
           <br />
-          <a href="elkaouid@hotmail.com" style={{ color: "#46a6fd" }}>
+          <a href="mailto:elkaouid@hotmail.com" style={{ color: "#46a6fd" }}>
             Mail mij
           </a>{" "}
           of{" "}

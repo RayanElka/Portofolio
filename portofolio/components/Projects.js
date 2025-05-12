@@ -11,28 +11,27 @@ import {
 const projects = [
   {
     title: "Bobkes",
-    link: "https://github.com/orhancalik/Bobkes",
+    github: "https://github.com/orhancalik/Bobkes",
+    live: "https://bobkes.onrender.com/",
+    image: "/pokemon.png",
     description:
       "Een originele webapplicatie waar gebruikers interactieve mini-games kunnen ontdekken en spelen. Gebouwd met een modern JavaScript-framework en gericht op snelle, leuke ervaringen.",
   },
-  {
-    title: "Webontwikkeling Project 24-25",
-    link: "https://github.com/RayanElka/Webontwikkeling-project-24-25",
-    description:
-      "Een uitgebreid groepsproject binnen het vak webontwikkeling (2024-2025), waarin innovatieve web features en moderne responsive designs centraal staan. Focus op samenwerking, frontend- en backend-logica.",
-  },
+
   {
     title: "Web24",
-    link: "https://github.com/RayanElka/web24",
+    github: "https://github.com/RayanElka/web24",
     description:
       "Solo-webproject waarin ik verschillende webtechnieken en frameworks test, optimaliseer en visualiseer. Experimenteerruimte voor nieuwe technologieën & creatieve ideeën.",
   },
   {
     title: "Avatar Mobile App (In Progress)",
     link: "",
-    image: "/avatar.gif",
+    image: "/Avatar1.png",
+    image: "/Avatar2.png",
+    image: "/Avatar3.png",
     description:
-      "Deze mobiele app (React Native, TypeScript) is volledig modulair opgezet. Gebruikers kunnen via verschillende schermen hun eigen avatar samenstellen, bekijken, en vechten in een BattleScreen. Modules: character-selectie, elementkeuze, team-building, lokale storage. Structuur: custom navigatie, herbruikbare componenten, theming & moderne best practices.",
+      "Deze mobiele app (React Native, TypeScript) is volledig modulair opgezet. Gebruikers kunnen via verschillende schermen alle episodes/seasons bekijken, quiz spelen, en een character screen voor info over je favoriete avatar character. Modules: character-list, quiz, Episodes, lokale storage. Structuur: custom navigatie, herbruikbare componenten, theming & moderne best practices.",
     isApp: true,
   },
 ];
@@ -151,24 +150,48 @@ export default function Projects() {
                   )}
                 </div>
 
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 6,
-                      color: "#46a6fd",
-                      fontWeight: "bold",
-                      textDecoration: "none",
-                      marginTop: "auto",
-                    }}
-                  >
-                    <FaGithub style={{ fontSize: "1.15em" }} /> Bekijk op GitHub
-                  </a>
-                )}
+                <div style={{ marginTop: "auto", display: "flex", gap: 10 }}>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 6,
+                        color: "#fff",
+                        background: "#46a6fd",
+                        fontWeight: "bold",
+                        textDecoration: "none",
+                        borderRadius: 6,
+                        padding: "7px 16px",
+                      }}
+                    >
+                      🌐 Live demo
+                    </a>
+                  )}
+
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 6,
+                        color: "#46a6fd",
+                        fontWeight: "bold",
+                        textDecoration: "none",
+                        background: "none",
+                      }}
+                    >
+                      <FaGithub style={{ fontSize: "1.15em" }} /> Bekijk op
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
