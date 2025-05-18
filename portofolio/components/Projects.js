@@ -1,6 +1,5 @@
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
-import "../styles/keen-slider.css";
 import {
   FaGithub,
   FaMobileAlt,
@@ -33,6 +32,13 @@ const projects = [
     description:
       "Deze mobiele app (React Native, TypeScript) is volledig modulair opgezet. Gebruikers kunnen via verschillende schermen alle episodes/seasons bekijken, quiz spelen, en een character screen voor info over je favoriete avatar character. Modules: character-list, quiz, Episodes, lokale storage. Structuur: custom navigatie, herbruikbare componenten, theming & moderne best practices.",
     isApp: true,
+  },
+  {
+    title: "Sociale Media Api",
+    link: "",
+
+    description:
+      "Ontwikkeld een geavanceerd social media planning systeem dat automatisch berichten plaatst op sociale media volgens een vooraf ingesteld tijdschema of een directe post. Deze full-stack applicatie biedt een oplossing voor professionals en marketingteams die hun online aanwezigheid willen optimaliseren door content strategisch in te plannen. (Groepswerk voor een bedrijfsproject)",
   },
 ];
 
