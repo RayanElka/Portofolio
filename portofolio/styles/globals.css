@@ -13,7 +13,7 @@ h3 {
   width: "62px";
   height: "5px";
   margin: "14px auto 0";
-  borderradius: "3px";
+  border-radius: "3px";
   background: "linear-gradient(90deg, #46a6fd 0%, #38e8ff 100%)";
   animation: "movegrad 2.3s linear infinite";
 }
@@ -30,16 +30,4 @@ section {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-.keen-slider {
-  overflow: visible;
-  padding-bottom: 20px;
-}
-.keen-slider__slide {
-  transition: box-shadow 0.2s, transform 0.2s;
-  cursor: grab;
-}
-.keen-slider__slide:hover {
-  box-shadow: 0 12px 36px #2fdfff27;
-  transform: scale(1.04);
 }
