@@ -12,7 +12,7 @@ const projects = [
       "Een originele webapplicatie waar gebruikers interactieve mini-games kunnen ontdekken en spelen. Gebouwd met een modern JavaScript-framework en gericht op snelle, leuke ervaringen.",
   },
   {
-    title: "Web24",
+    title: "Webontwikkeling Project Finance",
     github: "https://github.com/RayanElka/Webontwikkeling-project-24-25",
     live: "https://webontwikkeling-project-24-25-1.onrender.com",
     // Geen live link of image gespecificeerd
