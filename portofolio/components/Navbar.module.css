@@ -1,31 +1,49 @@
 .nav {
   position: sticky;
   top: 0;
-  background: #1a2236;
+  background: rgba(14, 19, 24, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(70, 166, 253, 0.1);
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 6vw;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(10, 20, 50, 0.08);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
+
 .logo {
   font-weight: bold;
   font-size: 1.4rem;
   letter-spacing: 2px;
+  color: #46a6fd;
+  text-decoration: none;
 }
+
 .links {
   list-style: none;
   display: flex;
   gap: 1.7rem;
+  margin: 0;
+  padding: 0;
 }
+
 .links li a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
+
 .links li a:hover {
   color: #46a6fd;
+  background: rgba(70, 166, 253, 0.1);
+}
+
+.active {
+  background: rgba(70, 166, 253, 0.15);
+  color: #46a6fd !important;
 }

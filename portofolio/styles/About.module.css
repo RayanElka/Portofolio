@@ -1,0 +1,115 @@
+.aboutSection {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 54px 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(70, 166, 253, 0.1);
+  border-radius: 12px;
+  margin: 2rem auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  color: #46a6fd;
+}
+
+.aboutCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(70, 166, 253, 0.1);
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.introduction {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skillsContainer {
+  margin-top: 2rem;
+}
+
+.skillsTitle {
+  color: #46a6fd;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skillCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(70, 166, 253, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(70, 166, 253, 0.15);
+}
+
+.skillCard h4 {
+  color: #46a6fd;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.skillCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skillCard li {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0;
+  text-align: center;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.skillCard li:hover {
+  color: #46a6fd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 40px 0;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .aboutCard {
+    padding: 1.5rem;
+  }
+
+  .introduction {
+    font-size: 1.1rem;
+  }
+}

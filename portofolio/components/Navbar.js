@@ -1,21 +1,47 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
+  const router = useRouter();
+
   return (
     <nav className={styles.nav}>
-      <div className={styles.logo}>Rayan el Kaouid</div>
+      <Link href="/" className={styles.logo}>
+        Rayan el Kaouid
+      </Link>
       <ul className={styles.links}>
         <li>
-          <a href="#about">Over mij</a>
+          <Link
+            href="/about"
+            className={router.pathname === "/about" ? styles.active : ""}
+          >
+            Over mij
+          </Link>
         </li>
         <li>
-          <a href="#experience">Ervaring</a>
+          <Link
+            href="/experience"
+            className={router.pathname === "/experience" ? styles.active : ""}
+          >
+            Ervaring
+          </Link>
         </li>
         <li>
-          <a href="#projects">Projecten</a>
+          <Link
+            href="/projects"
+            className={router.pathname === "/projects" ? styles.active : ""}
+          >
+            Projecten
+          </Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link
+            href="/contact"
+            className={router.pathname === "/contact" ? styles.active : ""}
+          >
+            Contact
+          </Link>
         </li>
         <li>
           <a

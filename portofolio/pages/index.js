@@ -1,23 +1,23 @@
-import Navbar from "../components/Navbar";
+import Head from "next/head";
 import Hero from "../components/Hero";
-import About from "../components/About";
-import Experience from "../components/Experience";
-import Projects from "../components/Projects";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import Skills from "../components/Skills";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Head>
+        <title>Rayan el Kaouid | Full Stack Developer</title>
+        <meta
+          name="description"
+          content="Portfolio van Rayan el Kaouid - Full Stack Developer met expertise in React, .NET en meer."
+        />
+        <meta property="og:title" content="Rayan el Kaouid | Portfolio" />
+        <meta
+          property="og:description"
+          content="Full Stack Developer met passie voor innovatieve oplossingen"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
     </>
   );
 }

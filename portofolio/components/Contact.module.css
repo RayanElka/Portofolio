@@ -1,0 +1,204 @@
+.contactSection {
+  padding: 60px 20px;
+  background: linear-gradient(145deg, #1a2236 0%, #2a3246 100%);
+  color: #fff;
+}
+
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  padding: 20px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 16px;
+}
+
+.contactForm textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contactForm button {
+  padding: 12px 24px;
+  background: #46a6fd;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contactForm button:hover {
+  background: #3b8fd8;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactInfo a {
+  color: #46a6fd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contactInfo a:hover {
+  color: #3b8fd8;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.light-button {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  margin: 1rem 0;
+}
+
+.linkedinButton,
+.githubButton {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.buttonHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: 300ms;
+  outline: #0f0f0f 2px solid;
+  outline-offset: 20;
+}
+
+.linkedinButton .buttonHolder {
+  color: #0a66c2;
+}
+
+.githubButton .buttonHolder {
+  color: #ffffff;
+}
+
+.buttonHolder svg {
+  height: 50px;
+  transition: 300ms;
+}
+
+.linkedinButton .buttonHolder svg {
+  fill: #0f0f0f;
+}
+
+.githubButton .buttonHolder svg {
+  fill: #0f0f0f;
+}
+
+.lightHolder {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.light {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+}
+
+/* LinkedIn specifieke hover effecten */
+.linkedinButton:hover .buttonHolder svg {
+  fill: #0a66c2;
+}
+
+.linkedinButton:hover .buttonHolder {
+  color: #0a66c2;
+  outline: #0a66c2 2px solid;
+  outline-offset: 2px;
+}
+
+.linkedinButton:hover .light {
+  background: linear-gradient(
+    180deg,
+    #0a66c2 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* GitHub specifieke hover effecten */
+.githubButton:hover .buttonHolder svg {
+  fill: #ffffff;
+}
+
+.githubButton:hover .buttonHolder {
+  color: #ffffff;
+  outline: #ffffff 2px solid;
+  outline-offset: 2px;
+}
+
+.githubButton:hover .light {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+  }
+}

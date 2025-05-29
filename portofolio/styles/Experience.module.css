@@ -1,0 +1,57 @@
+.experienceSection {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 54px 0;
+  backdrop-filter: blur(10px);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2.1rem;
+  color: #46a6fd;
+}
+
+.experienceGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.experienceCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  border: 1px solid rgba(70, 166, 253, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  padding: 1.6rem 1.1rem;
+  margin: 6px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.experienceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(70, 166, 253, 0.15);
+}
+
+.jobTitle {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  color: #46a6fd;
+  margin-bottom: 0.5rem;
+}
+
+.period {
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 1em;
+}
