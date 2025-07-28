@@ -39,21 +39,6 @@ export default function Hero() {
             I build creative digital solutions
           </span>
         </p>
-        <Link
-          href="/contact"
-          style={{
-            display: "inline-block",
-            background: "#fff",
-            color: "#46a6fd",
-            margin: "1.2rem 0",
-            padding: "12px 36px",
-            borderRadius: "30px",
-            fontWeight: "bold",
-            fontSize: "1.16rem",
-          }}
-        >
-          Neem contact op
-        </Link>
       </div>
     </section>
   );
