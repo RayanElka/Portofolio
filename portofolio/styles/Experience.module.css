@@ -56,11 +56,15 @@
 
 /* Media query voor aanpassing van kleuren op kleinere schermen */
 @media (max-width: 768px) {
+  .experienceCard {
+    background: #fff;
+    border: 1px solid #e0e7ef;
+  }
   .sectionTitle,
   .jobTitle,
   .company,
   .period,
   .description {
-    color: #46a6fd; /* of #fff, afhankelijk van je design */
+    color: #1a2236 !important; /* Donkere tekst voor op witte achtergrond */
   }
 }

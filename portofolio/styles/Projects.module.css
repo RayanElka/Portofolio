@@ -158,9 +158,20 @@
   .projectCard {
     width: 100%;
     max-width: 380px;
+    min-height: 320px; /* Voeg deze regel toe of verhoog deze waarde */
+    height: auto; /* Zorg dat de hoogte automatisch meegroeit */
+    padding-bottom: 24px; /* Extra ruimte onderaan voor tekst */
   }
 
   .projectsGrid {
     grid-template-columns: 1fr;
+  }
+
+  .projectDescription {
+    font-size: 15px;
+    color: #1a2236; /* Donkere tekst voor op lichte achtergrond */
+    line-height: 1.5;
+    overflow: visible;
+    padding-right: 0;
   }
 }
