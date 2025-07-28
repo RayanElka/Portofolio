@@ -55,3 +55,14 @@
   color: rgba(255, 255, 255, 0.8);
   margin-top: 1em;
 }
+
+/* Media query voor aanpassing van kleuren op kleinere schermen */
+@media (max-width: 768px) {
+  .sectionTitle,
+  .jobTitle,
+  .company,
+  .period,
+  .description {
+    color: #46a6fd; /* of #fff, afhankelijk van je design */
+  }
+}

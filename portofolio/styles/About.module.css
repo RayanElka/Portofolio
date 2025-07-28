@@ -112,4 +112,11 @@
   .introduction {
     font-size: 1.1rem;
   }
+
+  .sectionTitle,
+  .introduction,
+  .skillCard li,
+  .skillCard h4 {
+    color: #46a6fd; /* of #fff, afhankelijk van je design */
+  }
 }
