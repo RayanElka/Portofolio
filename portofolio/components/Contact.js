@@ -8,10 +8,26 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form handling logic here
+    setStatus("Bezig met verzenden...");
+    try {
+      const res = await fetch("https://formspree.io/f/xrblkqyn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setStatus("Bericht succesvol verzonden!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Er ging iets mis. Probeer opnieuw.");
+      }
+    } catch {
+      setStatus("Er ging iets mis. Probeer opnieuw.");
+    }
   };
 
   return (
@@ -44,6 +60,7 @@ export default function Contact() {
             required
           />
           <button type="submit">Verstuur</button>
+          {status && <p className={styles.statusMessage}>{status}</p>}
         </form>
 
         <div className={styles.contactInfo}>

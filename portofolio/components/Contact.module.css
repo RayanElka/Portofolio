@@ -202,3 +202,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 24px 2px;
+  }
+  .contactContainer {
+    padding: 8px;
+    gap: 18px;
+  }
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .buttonHolder {
+    width: 80px;
+    height: 80px;
+  }
+  .buttonHolder svg {
+    height: 36px;
+  }
+}
