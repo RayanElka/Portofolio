@@ -169,7 +169,7 @@
 
   .projectDescription {
     font-size: 15px;
-    color: #1a2236; /* Donkere tekst voor op lichte achtergrond */
+    color: white; /* Donkere tekst voor op lichte achtergrond */
     line-height: 1.5;
     overflow: visible;
     padding-right: 0;
