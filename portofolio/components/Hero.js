@@ -1,4 +1,5 @@
 import BubbleBackground from "./BubbleBackground";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -38,8 +39,8 @@ export default function Hero() {
             I build creative digital solutions
           </span>
         </p>
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           style={{
             display: "inline-block",
             background: "#fff",
@@ -52,7 +53,7 @@ export default function Hero() {
           }}
         >
           Neem contact op
-        </a>
+        </Link>
       </div>
     </section>
   );
