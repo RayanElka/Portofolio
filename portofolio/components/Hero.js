@@ -1,8 +1,13 @@
 import BubbleBackground from "./BubbleBackground";
 import Link from "next/link";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Hero() {
-  const badges = ["Temse, België", "Beschikbaar voor junior rollen", "Startklaar"];
+  const { language } = useLanguage();
+  const isNl = language === "nl";
+  const badges = isNl
+    ? ["Temse, België", "Beschikbaar voor junior rollen", "Startklaar"]
+    : ["Temse, Belgium", "Open to junior roles", "Ready to start"];
 
   return (
     <section
@@ -28,7 +33,7 @@ export default function Hero() {
         }}
       >
         <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", marginBottom: "1rem" }}>
-          Hi, ik ben Rayan el Kaouid
+          {isNl ? "Hi, ik ben Rayan el Kaouid" : "Hi, I am Rayan el Kaouid"}
         </h1>
         <p
           style={{
@@ -38,9 +43,9 @@ export default function Hero() {
             lineHeight: 1.75,
           }}
         >
-          Junior Software Developer / Full-stack uit Temse. Afgestudeerd in
-          2026 aan AP Hogeschool en op zoek naar een eerste vaste job als
-          developer.
+          {isNl
+            ? "Junior Software Developer / Full-stack uit Temse. Afgestudeerd in 2026 aan AP Hogeschool en op zoek naar een eerste vaste job als developer."
+            : "Junior Software Developer / Full-stack from Temse. Graduated in 2026 from AP University College and currently looking for a first full-time developer role."}
           <br />
           <span
             style={{
@@ -93,7 +98,7 @@ export default function Hero() {
               textDecoration: "none",
             }}
           >
-            Contacteer mij
+            {isNl ? "Contacteer mij" : "Contact me"}
           </Link>
           <a
             href="/cv-rayan-el-kaouid-2026.pdf"
@@ -109,7 +114,7 @@ export default function Hero() {
               textDecoration: "none",
             }}
           >
-            Bekijk CV
+            {isNl ? "Bekijk CV" : "View Resume"}
           </a>
         </div>
       </div>

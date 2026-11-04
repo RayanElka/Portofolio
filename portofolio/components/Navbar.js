@@ -2,11 +2,26 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+
+  const t = {
+    about: language === "nl" ? "Over mij" : "About",
+    experience: language === "nl" ? "Ervaring" : "Experience",
+    projects: language === "nl" ? "Projecten" : "Projects",
+    contact: language === "nl" ? "Contact" : "Contact",
+    cv: language === "nl" ? "CV" : "Resume",
+    langLabel: language === "nl" ? "EN" : "NL",
+    langAria:
+      language === "nl"
+        ? "Switch to English"
+        : "Schakel naar Nederlands",
+  };
 
   // Sluit menu bij navigatie
   const handleNavClick = () => setOpen(false);
@@ -30,7 +45,7 @@ export default function Navbar() {
             className={router.pathname === "/about" ? styles.active : ""}
             onClick={handleNavClick}
           >
-            Over mij
+            {t.about}
           </Link>
         </li>
         <li>
@@ -39,7 +54,7 @@ export default function Navbar() {
             className={router.pathname === "/experience" ? styles.active : ""}
             onClick={handleNavClick}
           >
-            Ervaring
+            {t.experience}
           </Link>
         </li>
         <li>
@@ -48,7 +63,7 @@ export default function Navbar() {
             className={router.pathname === "/projects" ? styles.active : ""}
             onClick={handleNavClick}
           >
-            Projecten
+            {t.projects}
           </Link>
         </li>
         <li>
@@ -57,7 +72,7 @@ export default function Navbar() {
             className={router.pathname === "/contact" ? styles.active : ""}
             onClick={handleNavClick}
           >
-            Contact
+            {t.contact}
           </Link>
         </li>
         <li>
@@ -67,8 +82,18 @@ export default function Navbar() {
             rel="noopener noreferrer"
             onClick={handleNavClick}
           >
-            CV
+            {t.cv}
           </a>
+        </li>
+        <li>
+          <button
+            className={styles.languageToggle}
+            onClick={toggleLanguage}
+            aria-label={t.langAria}
+            type="button"
+          >
+            {t.langLabel}
+          </button>
         </li>
       </ul>
     </nav>

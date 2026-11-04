@@ -49,6 +49,25 @@
   color: #b4ecff !important;
 }
 
+.languageToggle {
+  border: 1px solid rgba(130, 178, 221, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(235, 245, 255, 0.94);
+  font-weight: 700;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.68rem;
+  min-width: 52px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.languageToggle:hover {
+  color: #8cece1;
+  border-color: rgba(22, 199, 181, 0.58);
+  background: rgba(22, 199, 181, 0.09);
+}
+
 .hamburger {
   display: none;
   background: none;
@@ -89,6 +108,12 @@
     display: block;
     width: 100%;
     border-radius: 10px;
+  }
+
+  .languageToggle {
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
   }
 
   .links.open {

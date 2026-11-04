@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
+  const { language } = useLanguage();
+  const isNl = language === "nl";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,7 +16,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Bezig met verzenden...");
+    setStatus(isNl ? "Bezig met verzenden..." : "Sending...");
     try {
       const res = await fetch("https://formspree.io/f/xrblkqyn", {
         method: "POST",
@@ -20,35 +24,38 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        setStatus("Bericht succesvol verzonden!");
+        setStatus(
+          isNl ? "Bericht succesvol verzonden!" : "Message sent successfully!"
+        );
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("Er ging iets mis. Probeer opnieuw.");
+        setStatus(isNl ? "Er ging iets mis. Probeer opnieuw." : "Something went wrong. Please try again.");
       }
     } catch {
-      setStatus("Er ging iets mis. Probeer opnieuw.");
+      setStatus(isNl ? "Er ging iets mis. Probeer opnieuw." : "Something went wrong. Please try again.");
     }
   };
 
   return (
     <section id="contact" className={styles.contactSection}>
-      <h2>Contact</h2>
+      <h2>{isNl ? "Contact" : "Contact"}</h2>
       <p className={styles.introText}>
-        Zin om samen te werken of heb je een vacature die past bij mijn
-        profiel? Stuur gerust een bericht.
+        {isNl
+          ? "Zin om samen te werken of heb je een vacature die past bij mijn profiel? Stuur gerust een bericht."
+          : "Open to collaboration or have a vacancy that matches my profile? Feel free to send a message."}
       </p>
       <div className={styles.contactContainer}>
         <form onSubmit={handleSubmit} className={styles.contactForm}>
           <input
             type="text"
-            placeholder="Naam"
+            placeholder={isNl ? "Naam" : "Name"}
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder={isNl ? "Email" : "Email"}
             value={formData.email}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
@@ -56,19 +63,19 @@ export default function Contact() {
             required
           />
           <textarea
-            placeholder="Bericht"
+            placeholder={isNl ? "Bericht" : "Message"}
             value={formData.message}
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
             required
           />
-          <button type="submit">Verstuur</button>
+          <button type="submit">{isNl ? "Verstuur" : "Send"}</button>
           {status && <p className={styles.statusMessage}>{status}</p>}
         </form>
 
         <div className={styles.contactInfo}>
-          <h3>Direct contact</h3>
+          <h3>{isNl ? "Direct contact" : "Direct contact"}</h3>
           <a href="mailto:elkaouid@hotmail.com">elkaouid@hotmail.com</a>
           <a href="tel:+32485711419">+32 485 71 14 19</a>
 

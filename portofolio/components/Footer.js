@@ -1,7 +1,10 @@
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const { language } = useLanguage();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -30,8 +33,7 @@ export default function Footer() {
           </a>
         </div>
         <p className={styles.copyright}>
-          © {new Date().getFullYear()} Rayan el Kaouid. Alle rechten
-          voorbehouden.
+          © {new Date().getFullYear()} Rayan el Kaouid. {language === "nl" ? "Alle rechten voorbehouden." : "All rights reserved."}
         </p>
       </div>
     </footer>

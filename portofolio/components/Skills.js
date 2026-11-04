@@ -1,5 +1,6 @@
 import { FaNodeJs, FaJs, FaHtml5, FaCss3Alt, FaLinux } from "react-icons/fa";
 import { SiDotnet, SiMysql, SiTypescript } from "react-icons/si";
+import { useLanguage } from "../context/LanguageContext";
 
 const skills = [
   {
@@ -45,6 +46,8 @@ const skills = [
 ];
 
 export default function Skills() {
+  const { language } = useLanguage();
+
   return (
     <section
       style={{
@@ -53,7 +56,7 @@ export default function Skills() {
       }}
     >
       <h2 style={{ textAlign: "center", fontWeight: 800, marginBottom: 8 }}>
-        Mijn Skills
+        {language === "nl" ? "Mijn Skills" : "My Skills"}
       </h2>
       <div
         style={{
