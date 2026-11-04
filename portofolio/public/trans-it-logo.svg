@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Trans-IT styled logo</title>
+  <desc id="desc">Stylized Trans-IT logo artwork for portfolio project card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1B2C" />
+      <stop offset="100%" stop-color="#102E4A" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#19B5FF" />
+      <stop offset="100%" stop-color="#5EE8C2" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)" rx="40" />
+  <g opacity="0.18">
+    <circle cx="220" cy="120" r="180" fill="#39A9FF" />
+    <circle cx="1020" cy="690" r="210" fill="#1DE7C4" />
+  </g>
+
+  <g transform="translate(170 260)">
+    <rect x="0" y="0" width="860" height="280" rx="28" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="82" y="180" fill="white" font-size="112" font-family="Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="2">TRANS</text>
+    <text x="480" y="180" fill="url(#accent)" filter="url(#glow)" font-size="112" font-family="Segoe UI, Arial, sans-serif" font-weight="900" letter-spacing="3">-IT</text>
+    <rect x="82" y="206" width="700" height="8" rx="4" fill="url(#accent)"/>
+    <text x="84" y="250" fill="#BBD6EA" font-size="30" font-family="Segoe UI, Arial, sans-serif">full-stack development • software solutions</text>
+  </g>
+</svg>

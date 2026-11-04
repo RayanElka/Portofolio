@@ -5,15 +5,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Rayan el Kaouid | Full Stack Developer</title>
+        <title>Rayan el Kaouid | Junior Software Developer</title>
         <meta
           name="description"
-          content="Portfolio van Rayan el Kaouid - Full Stack Developer met expertise in React, .NET en meer."
+          content="Portfolio van Rayan el Kaouid - Junior Software Developer met stage-ervaring als full-stack developer en focus op JavaScript, TypeScript, Node.js, C#, SQL en Linux."
         />
         <meta property="og:title" content="Rayan el Kaouid | Portfolio" />
         <meta
           property="og:description"
-          content="Full Stack Developer met passie voor innovatieve oplossingen"
+          content="Junior Software Developer met een passie voor full-stack ontwikkeling"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

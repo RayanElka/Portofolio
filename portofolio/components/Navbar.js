@@ -62,7 +62,7 @@ export default function Navbar() {
         </li>
         <li>
           <a
-            href="/CV Rayan juist (1).pdf"
+            href="/cv-rayan-el-kaouid-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleNavClick}

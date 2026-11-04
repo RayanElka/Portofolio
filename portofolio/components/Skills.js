@@ -1,16 +1,16 @@
-import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaNodeJs, FaJs, FaHtml5, FaCss3Alt, FaLinux } from "react-icons/fa";
 import { SiDotnet, SiMysql, SiTypescript } from "react-icons/si";
-import { IoLogoWindows } from "react-icons/io";
 
 const skills = [
   {
-    name: "Microsoft Office",
-    icon: <IoLogoWindows color="#0078D4" size={38} />,
+    name: "JavaScript",
+    icon: <FaJs color="#f0db4f" size={38} />,
+    style: { background: "radial-gradient(circle, #fffbe0 60%, #f7fbfb 100%)" },
   },
   {
-    name: "C# / .NET",
-    icon: <SiDotnet color="#5C2D91" size={38} />,
-    style: { background: "radial-gradient(circle, #e7e1ff 60%, #f6f5ff 100%)" },
+    name: "TypeScript",
+    icon: <SiTypescript color="#3178C6" size={38} />,
+    style: { background: "radial-gradient(circle, #e8f2ff 60%, #f4f8ff 100%)" },
   },
   {
     name: "HTML/CSS",
@@ -23,34 +23,24 @@ const skills = [
     style: { background: "radial-gradient(circle, #ffe8e0 60%, #fcf6f2 100%)" },
   },
   {
-    name: "SQL / MySQL",
+    name: "Node.js",
+    icon: <FaNodeJs color="#3c873a" size={38} />,
+    style: { background: "radial-gradient(circle, #e6f8ea 60%, #f3fff6 100%)" },
+  },
+  {
+    name: "C# / .NET",
+    icon: <SiDotnet color="#5C2D91" size={38} />,
+    style: { background: "radial-gradient(circle, #e7e1ff 60%, #f6f5ff 100%)" },
+  },
+  {
+    name: "SQL",
     icon: <SiMysql color="#00758f" size={38} />,
     style: { background: "radial-gradient(circle, #e8f8ff 60%, #f3fdff 100%)" },
   },
   {
-    name: "Javascript",
-    icon: <FaJs color="#f0db4f" size={38} />,
-    style: { background: "radial-gradient(circle, #fffbe0 60%, #f7fbfb 100%)" },
-  },
-  {
-    name: "Typescript / Node.js",
-    icon: (
-      <span style={{ display: "flex", gap: 4 }}>
-        <SiTypescript color="#3178C6" size={32} />
-        <FaNodeJs color="#3c873a" size={32} />
-      </span>
-    ),
-    style: { background: "radial-gradient(circle, #e5f7f8 60%, #f6ffff 100%)" },
-  },
-  {
-    name: "React.js",
-    icon: <FaReact color="#61DBFB" size={38} />,
-    style: { background: "radial-gradient(circle, #eafffd 60%, #f5fcfe 100%)" },
-  },
-  {
-    name: "React Native",
-    icon: <FaReact color="#38d7ff" size={38} />,
-    style: { background: "radial-gradient(circle, #e7f7ff 60%, #f4fdff 100%)" },
+    name: "Linux",
+    icon: <FaLinux color="#111" size={38} />,
+    style: { background: "radial-gradient(circle, #f1f2f4 60%, #fbfbfc 100%)" },
   },
 ];
 

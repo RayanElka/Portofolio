@@ -1,32 +1,59 @@
 .contactSection {
-  padding: 60px 20px;
-  background: linear-gradient(145deg, #1a2236 0%, #2a3246 100%);
+  padding: 60px 24px;
+  background:
+    radial-gradient(circle at 92% 4%, rgba(22, 199, 181, 0.18), transparent 30%),
+    linear-gradient(155deg, #10233a 0%, #102a44 100%);
   color: #fff;
 }
 
+.contactSection h2 {
+  text-align: center;
+  font-size: clamp(1.9rem, 3.3vw, 2.4rem);
+  margin-bottom: 0.65rem;
+}
+
+.introText {
+  text-align: center;
+  color: rgba(239, 246, 255, 0.82);
+  max-width: 660px;
+  margin: 0 auto 2rem;
+}
+
 .contactContainer {
-  max-width: 800px;
+  max-width: 980px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 40px;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 24px;
   padding: 20px;
 }
 
 .contactForm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
+  background: rgba(8, 17, 28, 0.56);
+  border: 1px solid rgba(130, 178, 221, 0.22);
+  border-radius: 16px;
+  padding: 18px;
 }
 
 .contactForm input,
 .contactForm textarea {
-  padding: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid rgba(130, 178, 221, 0.22);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
+  outline: none;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: rgba(62, 160, 246, 0.72);
+  box-shadow: 0 0 0 3px rgba(62, 160, 246, 0.15);
 }
 
 .contactForm textarea {
@@ -35,192 +62,92 @@
 }
 
 .contactForm button {
-  padding: 12px 24px;
-  background: #46a6fd;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #3ea0f6, #2ec4b6);
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: inherit;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contactForm button:hover {
-  background: #3b8fd8;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(35, 151, 245, 0.35);
 }
 
 .contactInfo {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  background: rgba(8, 17, 28, 0.56);
+  border: 1px solid rgba(130, 178, 221, 0.22);
+  border-radius: 16px;
+  padding: 18px;
 }
 
 .contactInfo a {
-  color: #46a6fd;
+  color: #94d6ff;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.25s;
 }
 
 .contactInfo a:hover {
-  color: #3b8fd8;
+  color: #8cece1;
 }
 
 .socialButtons {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 1rem;
+  display: grid;
+  gap: 10px;
+  margin-top: 0.5rem;
 }
 
-.light-button {
-  position: relative;
-  height: 200px;
+.socialButton {
+  width: 100%;
   display: flex;
-  align-items: flex-end;
-  margin: 1rem 0;
-}
-
-.linkedinButton,
-.githubButton {
-  position: relative;
-  height: 200px;
-  display: flex;
-  align-items: flex-end;
-  outline: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.buttonHolder {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 100px;
-  background-color: #0a0a0a;
-  border-radius: 5px;
-  font-weight: 700;
-  transition: 300ms;
-  outline: #0f0f0f 2px solid;
-  outline-offset: 20;
-}
-
-.linkedinButton .buttonHolder {
-  color: #0a66c2;
-}
-
-.githubButton .buttonHolder {
-  color: #ffffff;
-}
-
-.buttonHolder svg {
-  height: 50px;
-  transition: 300ms;
-}
-
-.linkedinButton .buttonHolder svg {
-  fill: #0f0f0f;
-}
-
-.githubButton .buttonHolder svg {
-  fill: #0f0f0f;
-}
-
-.lightHolder {
-  position: absolute;
-  height: 200px;
-  width: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.dot {
-  position: absolute;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  background-color: #0a0a0a;
+  gap: 10px;
+  justify-content: flex-start;
   border-radius: 10px;
-  z-index: 2;
+  border: 1px solid rgba(130, 178, 221, 0.26);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 10px 12px;
+  color: #eff6ff !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  font-weight: 700;
 }
 
-.light {
-  position: absolute;
-  top: 0;
-  width: 200px;
-  height: 200px;
-  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
-  background: transparent;
+.socialButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(62, 160, 246, 0.6);
+  background: rgba(62, 160, 246, 0.1);
 }
 
-/* LinkedIn specifieke hover effecten */
-.linkedinButton:hover .buttonHolder svg {
-  fill: #0a66c2;
-}
-
-.linkedinButton:hover .buttonHolder {
-  color: #0a66c2;
-  outline: #0a66c2 2px solid;
-  outline-offset: 2px;
-}
-
-.linkedinButton:hover .light {
-  background: linear-gradient(
-    180deg,
-    #0a66c2 0%,
-    rgba(255, 255, 255, 0) 75%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-/* GitHub specifieke hover effecten */
-.githubButton:hover .buttonHolder svg {
-  fill: #ffffff;
-}
-
-.githubButton:hover .buttonHolder {
-  color: #ffffff;
-  outline: #ffffff 2px solid;
-  outline-offset: 2px;
-}
-
-.githubButton:hover .light {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0) 75%,
-    rgba(255, 255, 255, 0) 100%
-  );
+.statusMessage {
+  margin-top: 2px;
+  font-size: 14px;
+  color: #8cece1;
 }
 
 @media (max-width: 768px) {
   .contactContainer {
     grid-template-columns: 1fr;
+    padding: 8px;
   }
 }
 
 @media (max-width: 600px) {
   .contactSection {
-    padding: 24px 2px;
+    padding: 28px 4px;
   }
   .contactContainer {
-    padding: 8px;
-    gap: 18px;
+    gap: 12px;
   }
   .contactForm input,
   .contactForm textarea {
     font-size: 14px;
-    padding: 8px;
-  }
-  .buttonHolder {
-    width: 80px;
-    height: 80px;
-  }
-  .buttonHolder svg {
-    height: 36px;
+    padding: 10px;
   }
 }

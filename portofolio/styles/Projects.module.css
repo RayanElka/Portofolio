@@ -1,15 +1,19 @@
 /* Projects.module.css */
 .projectSection {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 54px 0;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(20, 184, 166, 0.16), transparent 38%),
+    radial-gradient(circle at 88% 10%, rgba(70, 166, 253, 0.18), transparent 34%),
+    rgba(255, 255, 255, 0.03);
+  padding: 64px 0;
   text-align: center;
   backdrop-filter: blur(10px);
 }
 
 .sectionTitle {
   margin-bottom: 40px;
-  font-size: 2rem;
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
   color: #46a6fd;
+  letter-spacing: 0.3px;
 }
 
 .projectsGrid {
@@ -26,29 +30,33 @@
 .projectCard {
   position: relative;
   width: 380px;
-  aspect-ratio: 3/2;
+  aspect-ratio: 1.18 / 1;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   perspective: 1000px;
-  box-shadow: 0 0 0 1px rgba(70, 166, 253, 0.2);
+  box-shadow:
+    0 16px 40px rgba(8, 29, 54, 0.28),
+    0 0 0 1px rgba(70, 166, 253, 0.2);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .projectCard:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(70, 166, 253, 0.2);
+  transform: translateY(-8px) scale(1.025);
+  box-shadow:
+    0 26px 46px rgba(8, 29, 54, 0.34),
+    0 0 0 1px rgba(94, 232, 194, 0.4);
 }
 
 .projectImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: rgba(14, 19, 24, 0.95);
-  padding: 10px;
+  background: linear-gradient(160deg, #0e1318 0%, #142032 100%);
+  padding: 14px;
 }
 
 .avatarAppImage {
@@ -62,9 +70,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 25px;
+  padding: 24px;
   box-sizing: border-box;
-  background: rgba(14, 19, 24, 0.95);
+  background:
+    linear-gradient(165deg, rgba(11, 18, 27, 0.96), rgba(15, 32, 52, 0.95));
   backdrop-filter: blur(10px);
   transform: rotateX(-90deg);
   transform-origin: bottom;
@@ -78,19 +87,38 @@
   transform: rotateX(0deg);
 }
 
+.projectBadge {
+  align-self: flex-start;
+  background: linear-gradient(90deg, #14b8a6, #46a6fd);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
 .projectTitle {
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   color: #46a6fd;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.projectStack {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(148, 214, 255, 0.9);
 }
 
 .projectDescription {
-  margin: 15px 0;
+  margin: 10px 0 14px;
   font-size: 15px;
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5;
+  line-height: 1.58;
   flex-grow: 1;
   overflow-y: auto;
   padding-right: 10px;
@@ -112,6 +140,7 @@
 
 .projectLinks {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: auto;
 }
@@ -158,20 +187,25 @@
   .projectCard {
     width: 100%;
     max-width: 380px;
-    min-height: 320px; /* Voeg deze regel toe of verhoog deze waarde */
-    height: auto; /* Zorg dat de hoogte automatisch meegroeit */
-    padding-bottom: 24px; /* Extra ruimte onderaan voor tekst */
+    aspect-ratio: 1/1;
+    min-height: 340px;
   }
 
   .projectsGrid {
     grid-template-columns: 1fr;
+    gap: 1.4rem;
   }
 
   .projectDescription {
     font-size: 15px;
-    color: white; /* Donkere tekst voor op lichte achtergrond */
+    color: white;
     line-height: 1.5;
     overflow: visible;
     padding-right: 0;
+  }
+
+  .projectLinks a {
+    width: 100%;
+    justify-content: center;
   }
 }

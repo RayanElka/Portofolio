@@ -4,12 +4,30 @@ import styles from "../styles/Projects.module.css";
 
 const projects = [
   {
+    title: "Trans-IT Stageproject",
+    image: "/trans-it-logo.svg",
+    description:
+      "Tijdens mijn stage bij Trans-IT werkte ik aan full-stack softwareontwikkeling: features uitwerken, code verbeteren en samenwerken op een professionele workflow.",
+    stack: "JavaScript, TypeScript, Node.js, SQL",
+    highlight: "Stage 2026",
+  },
+  {
+    title: "Stageblog",
+    live: "https://wpl-stage-blog.vercel.app",
+    description:
+      "Persoonlijke stageblog waarin ik mijn leerproces, technische keuzes en voortgang tijdens mijn stage als full-stack developer documenteerde.",
+    stack: "Next.js, CSS",
+    highlight: "Live",
+  },
+  {
     title: "Bobkes",
     github: "https://github.com/orhancalik/Bobkes",
     live: "https://bobkes.onrender.com/",
     image: "/pokemon.png",
     description:
       "Een originele webapplicatie waar gebruikers interactieve mini-games kunnen ontdekken en spelen. Gebouwd met een modern JavaScript-framework en gericht op snelle, leuke ervaringen.",
+    stack: "JavaScript, Node.js",
+    highlight: "Team",
   },
   {
     title: "Webontwikkeling Project Finance",
@@ -19,6 +37,8 @@ const projects = [
 
     description:
       "Solo-webproject waarin ik verschillende webtechnieken en frameworks test, optimaliseer en visualiseer. Experimenteerruimte voor nieuwe technologieën & creatieve ideeën.",
+    stack: "JavaScript, HTML, CSS",
+    highlight: "Solo",
   },
   {
     title: "Avatar Mobile App (In Progress)",
@@ -26,12 +46,16 @@ const projects = [
     description:
       "Deze mobiele app (React Native, TypeScript) is volledig modulair opgezet. Gebruikers kunnen via verschillende schermen alle episodes/seasons bekijken, quiz spelen, en een character screen voor info over je favoriete avatar character. Modules: character-list, quiz, Episodes, lokale storage. Structuur: custom navigatie, herbruikbare componenten, theming & moderne best practices.",
     isApp: true,
+    stack: "React Native, TypeScript",
+    highlight: "In progress",
   },
   {
     title: "Sociale Media Api",
     image: "/deskdrive.jpg", // Added image
     description:
       "Ontwikkeld een geavanceerd social media planning systeem dat automatisch berichten plaatst op sociale media volgens een vooraf ingesteld tijdschema of een directe post. Deze full-stack applicatie biedt een oplossing voor professionals en marketingteams die hun online aanwezigheid willen optimaliseren door content strategisch in te plannen. (Groepswerk voor een bedrijfsproject)",
+    stack: "API, Full-stack",
+    highlight: "Groepswerk",
   },
 ];
 
@@ -57,12 +81,18 @@ export default function Projects() {
             )}
 
             <div className={styles.projectContent}>
+              {project.highlight && (
+                <span className={styles.projectBadge}>{project.highlight}</span>
+              )}
               <h3 className={styles.projectTitle}>
                 {project.title}
                 {project.isApp && (
                   <FaMobileAlt size={16} style={{ marginLeft: "8px" }} />
                 )}
               </h3>
+              {project.stack && (
+                <p className={styles.projectStack}>{project.stack}</p>
+              )}
 
               <p className={styles.projectDescription}>{project.description}</p>
 

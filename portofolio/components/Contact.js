@@ -33,6 +33,10 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.contactSection}>
       <h2>Contact</h2>
+      <p className={styles.introText}>
+        Zin om samen te werken of heb je een vacature die past bij mijn
+        profiel? Stuur gerust een bericht.
+      </p>
       <div className={styles.contactContainer}>
         <form onSubmit={handleSubmit} className={styles.contactForm}>
           <input
@@ -66,47 +70,28 @@ export default function Contact() {
         <div className={styles.contactInfo}>
           <h3>Direct contact</h3>
           <a href="mailto:elkaouid@hotmail.com">elkaouid@hotmail.com</a>
+          <a href="tel:+32485711419">+32 485 71 14 19</a>
 
           <div className={styles.socialButtons}>
-            <div className={styles.lightButton}>
-              <a
-                href="https://www.linkedin.com/in/rayan-el-kaouid-760336304/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.linkedinButton}
-              >
-                <div className={styles.lightHolder}>
-                  <div className={styles.dot}></div>
-                  <div className={styles.light}></div>
-                </div>
-                <div className={styles.buttonHolder}>
-                  <FaLinkedin size={50} />
-                  LinkedIn
-                </div>
-              </a>
-            </div>
+            <a
+              href="https://www.linkedin.com/in/rayan-el-kaouid-760336304/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialButton}
+            >
+              <FaLinkedin size={24} />
+              LinkedIn
+            </a>
 
-            <div className={styles.lightButton}>
-              <a
-                href="https://github.com/RayanElka"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.githubButton}
-              >
-                <div className={styles.lightHolder}>
-                  <div className={`${styles.dot} ${styles.githubDot}`}></div>
-                  <div
-                    className={`${styles.light} ${styles.githubLight}`}
-                  ></div>
-                </div>
-                <div
-                  className={`${styles.buttonHolder} ${styles.githubHolder}`}
-                >
-                  <FaGithub size={50} />
-                  GitHub
-                </div>
-              </a>
-            </div>
+            <a
+              href="https://github.com/RayanElka"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialButton}
+            >
+              <FaGithub size={24} />
+              GitHub
+            </a>
           </div>
         </div>
       </div>
