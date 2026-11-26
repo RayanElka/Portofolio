@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rayan el Kaouid · portfolio
 
-## Getting Started
+Tweetalig developerportfolio met een overzicht van mijn werk, stage, ervaring en technische vaardigheden. De drie case studies beschrijven het probleem, mijn bijdrage en de belangrijkste technische keuzes. De site gebruikt Next.js Pages Router, TypeScript, React en CSS. De Nederlandse versie staat op `/`, de Engelse op `/en`.
 
-First, run the development server:
+## Lokaal ontwikkelen
 
-```bash
+Gebruik Node.js 24 en npm. Voer de opdrachten uit vanuit deze map (`portofolio`).
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+De ontwikkelserver gebruikt standaard poort 3000. In een cloudomgeving waarin de standaard npm-cache niet beschrijfbaar is, gebruik je `npm ci --cache /tmp/portofolio-npm-cache`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Controleren en lokaal bouwen
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run lint
+npm run typecheck
+npm run build
+npm start
+```
 
-## Learn More
+Gebruik voor performance- en toegankelijkheidsmetingen de productiebuild. Controleer bij wijzigingen de twee taalroutes, de drie case studies en het licht/donkerthema. Onderschep aanvragen naar Formspree in browsertests om het verzendgedrag te valideren zonder een bericht af te leveren.
 
-To learn more about Next.js, take a look at the following resources:
+## Projectstructuur
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Map | Inhoud |
+| --- | --- |
+| `pages/` | Paginaroutes en statisch gegenereerde cases |
+| `components/` | Navigatie, gedeelde secties, formulier en metadata |
+| `content/portfolio.ts` | Getypeerde content in het Nederlands en Engels |
+| `styles/` | Layout, thematokens en lokaal gehoste lettertypen met OFL-licenties |
+| `public/` | Projectbeelden, cv, favicon, deelafbeelding, robots.txt en sitemap |
+| `docs/` | Onderzoek, beginsituatie en eindcontrole |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Het contactformulier gebruikt het bestaande openbare Formspree-eindpunt. De site heeft geen geheime omgevingsvariabelen nodig. Het e-mailadres en de andere directe contactopties staan ook op de contactpagina.
 
-## Deploy on Vercel
+## Deployen naar Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Importeer `RayanElka/Portofolio` in Vercel of gebruik het bestaande project.
+2. Kies `portofolio` als **Root Directory**, **Next.js** als frameworkpreset en **24.x** als Node.js-versie. Laat de standaard installatie- en buildopdrachten ingeschakeld.
+3. Maak een previewdeploy van `portfolio/professional-upgrade`. Controleer de talen, cases, cv en het formulier op die preview. Een echte Formspree-test levert een bericht af.
+4. Publiceer pas na goedkeuring door de eigenaar. De canonieke URL staat in `content/portfolio.ts`. Werk deze en de URL's in `public/robots.txt` en `public/sitemap.xml` bij als het productiedomein verandert. Voeg bij nieuwe indexeerbare routes ook de twee taalvarianten toe aan de sitemap.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Portfolio-onderzoek](docs/portfolio-onderzoek.md) · [Beginsituatie](docs/beginsituatie.md) · [Upgrade en eindcontrole](docs/upgrade.md)
