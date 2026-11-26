@@ -19,12 +19,13 @@ const projects = [
   {
     titleNl: "Stageblog",
     titleEn: "Internship Blog",
+    github: "https://github.com/RayanElka/WPLStageBlog",
     live: "https://wpl-stage-blog.vercel.app",
     descriptionNl:
       "Persoonlijke stageblog waarin ik mijn leerproces, technische keuzes en voortgang tijdens mijn stage als full-stack developer documenteerde.",
     descriptionEn:
       "Personal internship blog where I documented my learning process, technical choices, and progress during my full-stack internship.",
-    stack: "Next.js, CSS",
+    stack: "React, TypeScript, Vite, i18next",
     highlightNl: "Live",
     highlightEn: "Live",
   },
@@ -50,10 +51,10 @@ const projects = [
     image: "/Finance.png", // Updated image path
 
     descriptionNl:
-      "Solo-webproject waarin ik verschillende webtechnieken en frameworks test, optimaliseer en visualiseer. Experimenteerruimte voor nieuwe technologieën & creatieve ideeën.",
+      "Mijn webapp om inkomsten en uitgaven bij te houden, te bewerken en te filteren. Gebruikers beheren hun gegevens via een eigen account.",
     descriptionEn:
-      "Solo web project where I test, optimize, and visualize different web technologies and frameworks. A practical playground for new technologies and creative ideas.",
-    stack: "JavaScript, HTML, CSS",
+      "A web app for tracking, editing, and filtering income and expenses. Users manage their records through individual accounts.",
+    stack: "TypeScript, Express, EJS, MongoDB",
     highlightNl: "Solo",
     highlightEn: "Solo",
   },
