@@ -36,6 +36,7 @@ export default function Seo({
     "@type": "Person",
     "@id": new URL("/#rayan-el-kaouid", profile.siteUrl).href,
     name: profile.name,
+    email: profile.email,
     url: localizedUrl("/", "nl"),
     jobTitle: "Full-stack Developer",
     alumniOf: {

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { experience, profile, projects, skills, type Locale, type Project } from "../content/portfolio";
+import { experience, profile, projects, type Locale, type Project } from "../content/portfolio";
 import { Arrow, ProfileLinks } from "./SiteLayout";
 
 export function PageIntro({ title, children }: { title: string; children: ReactNode }) {
@@ -21,7 +21,7 @@ export function Hero({ locale }: { locale: Locale }) {
       <div className="hero-copy">
         <p className="eyebrow availability"><span aria-hidden="true" />{nl ? "Open voor een developerrol" : "Open to developer roles"}</p>
         <h1 id="hero-heading">Rayan<br /> el Kaouid<span className="accent">.</span></h1>
-        <p className="hero-role">{nl ? "Full-stack developer met focus op frontend" : "Full-stack developer focused on frontend"}</p>
+        <p className="hero-role">Full-stack developer</p>
         <p className="hero-description">{nl
           ? "Ik bouw webapplicaties van interface tot API. Afgestudeerd in Programmeren aan AP Hogeschool Antwerpen, met stage-ervaring in logistieke software bij Trans-IT."
           : "I build web applications from interface to API. I graduated in Programming at AP University College Antwerp and interned on logistics software at Trans-IT."}</p>
@@ -118,29 +118,16 @@ export function AboutContent({ locale, heading: Heading = "h2" }: { locale: Loca
   const nl = locale === "nl";
 
   return (
-    <div className="about-grid">
-      <section className="panel about-panel" aria-labelledby="approach">
-        <Heading id="approach">{nl ? "Van scherm tot gegevens" : "From screen to data"}</Heading>
-        <p>{nl
-          ? "Ik werk het liefst aan de frontend, waar je meteen ziet of een workflow duidelijk is. Dankzij mijn opleiding en stage kan ik ook volgen hoe een scherm zijn data krijgt en wat er nodig is om een wijziging door de hele applicatie te voeren."
-          : "I enjoy frontend work because it shows immediately whether a workflow makes sense. My education and internship also taught me how a screen gets its data and what it takes to carry a change through the application."}</p>
-        <Subheading className="about-subheading">{nl ? "Waar ik nieuwsgierig naar ben" : "What I’m curious about"}</Subheading>
-        <p>{nl
-          ? "Ik volg de ontwikkelingen rond AI-agents, lokaal draaiende taalmodellen en automatisering. Mijn ervaring als AI Trainer maakt me nieuwsgierig naar hoe je de kwaliteit van zulke systemen beoordeelt en waar menselijke controle nodig is."
-          : "I follow developments in AI agents, locally run language models and automation. My time as an AI Trainer made me curious about how to assess these systems and where human review matters."}</p>
-      </section>
-      <section className="panel skills-panel" aria-labelledby="skills">
-        <Heading id="skills">{nl ? "Technische vaardigheden" : "Technical skills"}</Heading>
-        <dl>
-          {skills.map((group) => (
-            <div key={group.title.en}>
-              <dt>{group.title[locale]}</dt>
-              <dd><Stack items={group.items} locale={locale} /></dd>
-            </div>
-          ))}
-        </dl>
-      </section>
-    </div>
+    <section className="panel about-panel" aria-labelledby="approach">
+      <Heading id="approach">{nl ? "Van scherm tot gegevens" : "From screen to data"}</Heading>
+      <p>{nl
+        ? "Tijdens mijn opleiding en stage werkte ik aan webinterfaces en de logica erachter. Ik volg hoe gegevens van een scherm naar de server gaan en wat er nodig is om een wijziging door de hele applicatie te voeren."
+        : "During my studies and internship, I worked on web interfaces and the logic behind them. I follow how data travels from the screen to the server and what it takes to carry a change through the application."}</p>
+      <Subheading className="about-subheading">{nl ? "Waar ik nieuwsgierig naar ben" : "What I’m curious about"}</Subheading>
+      <p>{nl
+        ? "Ik volg de ontwikkelingen rond AI-agents, lokaal draaiende taalmodellen en automatisering. Mijn ervaring als AI Trainer maakt me nieuwsgierig naar hoe je de kwaliteit van zulke systemen beoordeelt en waar menselijke controle nodig is."
+        : "I follow developments in AI agents, locally run language models and automation. My time as an AI Trainer made me curious about how to assess these systems and where human review matters."}</p>
+    </section>
   );
 }
 

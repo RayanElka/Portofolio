@@ -1,6 +1,7 @@
+import Link from "next/link";
 import Seo from "../components/Seo";
 import { AboutContent, PageIntro } from "../components/PortfolioSections";
-import { useLocale } from "../components/SiteLayout";
+import { Arrow, useLocale } from "../components/SiteLayout";
 
 export default function About() {
   const locale = useLocale();
@@ -15,6 +16,9 @@ export default function About() {
       <Seo title={title} description={description} locale={locale} path="/about" />
       <PageIntro title={title}>{description}</PageIntro>
       <AboutContent locale={locale} />
+      <Link className="text-action section-actions" href="/#tech-stack">
+        {nl ? "Bekijk mijn tech stack" : "Explore my tech stack"} <Arrow />
+      </Link>
     </div>
   );
 }

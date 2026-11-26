@@ -20,7 +20,7 @@ De bekeken bronnen geven richting aan het scannen van kandidaten en het technisc
 
 ## Ontwerpkeuzes voor Rayan
 
-- Maak de identiteit zichtbaar in de eerste viewport. Jemima Abu gebruikt een specifieke functiekop met één regel die haar bredere bijdrage verklaart. Anand Baraik zet een algemene welkomstregel boven zijn verhaal. Voor Rayan is een heldere kop over full-stack development met frontendfocus informatiever.
+- Maak de identiteit zichtbaar in de eerste viewport. Jemima Abu gebruikt een specifieke functiekop met één regel die haar bredere bijdrage verklaart. Anand Baraik zet een algemene welkomstregel boven zijn verhaal. Voor Rayan maakt de functiekop Full-stack developer meteen duidelijk wat hij doet.
 - Gebruik een compacte navigatie met woorden. Het iconenmenu van Md Nayeem Hossain bespaart ruimte op mobiel, maar vraagt meer interpretatie dan labels zoals Projecten, Ervaring en Contact. Aditya Vikrams tekstlinks staan onder zijn socials en krijgen weinig prioriteit.
 - Laat case studies beginnen met echt werk. Gebruik bestaande projectbeelden en schrijf naast elk beeld wat het probleem, de bijdrage en de technische afweging waren. Zet demo en bron vlak bij het project als de link verifieerbaar is.
 - Ontleen onderscheid aan typografie, een beperkt palet en duidelijke ritmes in het grid. De geanimeerde toegangspoort van Israel Mitolu is onderscheidend in een creatief portfolio, maar voegt een verplichte handeling toe tussen een recruiter en de inhoud.

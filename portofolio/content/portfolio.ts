@@ -25,7 +25,7 @@ export type Project = {
 
 export const profile = {
   name: "Rayan el Kaouid",
-  email: "elkaouid@hotmail.com",
+  email: "rayanelkaouid@gmail.com",
   phone: "+32485711419",
   phoneLabel: "+32 485 71 14 19",
   github: "https://github.com/RayanElka",
@@ -221,22 +221,5 @@ export const experience: readonly ExperienceEntry[] = [
       nl: "Mijn opleiding in programmeren vormde de basis voor mijn werk aan webinterfaces en back-ends.",
       en: "My programming studies laid the foundation for my work on web interfaces and back ends.",
     },
-  },
-];
-
-type SkillGroup = { title: Localized; items: readonly string[] };
-
-export const skills: readonly SkillGroup[] = [
-  {
-    title: { nl: "Frontend & mobile", en: "Frontend & mobile" },
-    items: ["React", "TypeScript", "JavaScript", "HTML", "CSS", "React Native"],
-  },
-  {
-    title: { nl: "Backend & data", en: "Backend & data" },
-    items: ["Node.js", "Express", "C#", "MongoDB", "PostgreSQL", "SQL"],
-  },
-  {
-    title: { nl: "Cloud & tooling", en: "Cloud & tooling" },
-    items: ["Azure", "Docker", "Git", "Linux"],
   },
 ];
